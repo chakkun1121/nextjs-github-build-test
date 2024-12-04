@@ -36,12 +36,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: latest
-      - name: Install pnpm
-        run: npm install -g pnpm
+      - name: Install bun
+        run: npm install -g bun
       - name: Install dependencies
-        run: pnpm install
+        run: bun install
       - name: Build
-        run: pnpm next build
+        run: bun build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
